@@ -1,0 +1,27 @@
+.f_xs {
+	font-size: var(--b-font-size-xs);
+}
+.f_s {
+	font-size: var(--b-font-size-s);
+}
+.f_sm {
+	font-size: var(--b-font-size-sm);
+}
+.f_m {
+	font-size: var(--b-font-size-m);
+}
+.f_ml {
+	font-size: var(--b-font-size-ml);
+}
+.f_l {
+	font-size: var(--b-font-size-l);
+}
+.f_xl {
+	font-size: var(--b-font-size-xl);
+}
+.f_xxl {
+	font-size: var(--b-font-size-xxl);
+}
+.f_xxxl {
+	font-size: var(--b-font-size-xxxl);
+}

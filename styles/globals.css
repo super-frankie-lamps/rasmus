@@ -1,0 +1,61 @@
+
+:root {
+  --b-spacing-xxs: 2px;
+  --b-spacing-xs: 4px;
+  --b-spacing-s: 8px;
+  --b-spacing-m: 16px;
+  --b-spacing-ms: 24px;
+  --b-spacing-l: 32px;
+  --b-spacing-xl: 48px;
+  --b-spacing-xxl: 64px;
+  --b-spacing-xxxl: 128px;
+
+  --b-container-width: 1160px;
+
+  --b-font-family-base: 'Roboto Condensed', Roboto, Arial, Helvetica, sans-serif;
+
+  --b-font-size-xxs: 8px;
+  --b-font-size-xs: 10px;
+  --b-font-size-s: 12px;
+  --b-font-size-m: 14px;
+  --b-font-size-l: 16px;
+  --b-font-size-xl: 18px;
+  --b-font-size-xxl: 24px;
+  --b-font-size-xxxl: 32px;
+  --b-font-size-xxxxl: 40px;
+
+  --b-border-width-xs: 1px;
+  --b-border-width-s: 2px;
+  --b-border-width-m: 3px;
+  --b-border-width-l: 4px;
+
+  --b-border-radius-xxs: 1px;
+  --b-border-radius-xs: 2px;
+  --b-border-radius-s: 4px;
+  --b-border-radius-m: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
