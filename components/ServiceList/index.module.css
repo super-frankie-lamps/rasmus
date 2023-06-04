@@ -1,0 +1,22 @@
+.wrapper {
+   background: url(../../public/assets/images/serviceListBg.jpg);
+   padding: var(--b-spacing-ms) 0 178px;
+}
+.listWrapper {
+   width: 100%;
+   justify-content: space-between;
+}
+.title {
+   max-width: 560px;
+   width: 100%;
+}
+.list {
+   max-width: 460px;
+   width: 100%;
+}
+.serviceList {
+   margin-bottom: var(--b-spacing-ms);
+}
+.icon {
+   margin-right: var(--b-spacing-m);
+}

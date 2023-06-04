@@ -1,38 +1,55 @@
 
 :root {
-  --b-spacing-xxs: 2px;
+  --b-font-family-base: 'Regular', sans-serif;
+  --b-font-family-medium: 'Medium', sans-serif;
+  --b-font-family-semiBold: 'SemiBold', sans-serif;
+  --b-font-family-bold: 'Bold', sans-serif;
+
+  --b-txt-color1: #282828;
+  --b-txt-color2: #FFF;
+  --b-txt-color3: #FFD15C;
+
+  --b-bg-color1: #F8F8F8;
+  --b-bg-color2: #1E1E1E;
+
+  --b-font-size-xs: 12px;
+  --b-font-size-s: 14px;
+  --b-font-size-m: 16px;
+  --b-font-size-l: 18px;
+  --b-font-size-xl: 20px;
+  --b-font-size-xxl: 34px;
+  --b-font-size-xxxl: 44px;
+  --b-font-size-xxxxl: 52px;
+
   --b-spacing-xs: 4px;
   --b-spacing-s: 8px;
   --b-spacing-m: 16px;
-  --b-spacing-ms: 24px;
-  --b-spacing-l: 32px;
-  --b-spacing-xl: 48px;
-  --b-spacing-xxl: 64px;
+  --b-spacing-ms: 20px;
+  --b-spacing-l: 30px;
+  --b-spacing-xl: 40px;
+  --b-spacing-xxl: 80px;
   --b-spacing-xxxl: 128px;
 
-  --b-container-width: 1160px;
-
-  --b-font-family-base: 'Roboto Condensed', Roboto, Arial, Helvetica, sans-serif;
-
-  --b-font-size-xxs: 8px;
-  --b-font-size-xs: 10px;
-  --b-font-size-s: 12px;
-  --b-font-size-m: 14px;
-  --b-font-size-l: 16px;
-  --b-font-size-xl: 18px;
-  --b-font-size-xxl: 24px;
-  --b-font-size-xxxl: 32px;
-  --b-font-size-xxxxl: 40px;
-
   --b-border-width-xs: 1px;
-  --b-border-width-s: 2px;
-  --b-border-width-m: 3px;
-  --b-border-width-l: 4px;
 
-  --b-border-radius-xxs: 1px;
-  --b-border-radius-xs: 2px;
-  --b-border-radius-s: 4px;
-  --b-border-radius-m: 8px;
+  --b-container-width: 1160px;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('../public/assets/fonts/InstrumentSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('../public/assets/fonts/InstrumentSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SemiBold';
+  src: url('../public/assets/fonts/InstrumentSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../public/assets/fonts/InstrumentSans-Bold.ttf') format('truetype');
 }
 
 * {
@@ -42,8 +59,8 @@
 }
 
 body {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--b-font-family-base);
+  font-size: var(--b-font-size-l);
 }
 
 a {

@@ -1,13 +1,12 @@
-import { Container } from "@components/common"
-import { AText, Section } from "@components/uikit"
+import AboutMe from "@components/AboutMe"
+import ServiceList from "@components/ServiceList"
 
 const Home = () => {
   return (
-	<Section>
-		<Container>
-			<AText>Home</AText>
-		</Container>
-	</Section>
+    <>
+		<ServiceList/>
+    <AboutMe/>
+    </>
   )
 }
 

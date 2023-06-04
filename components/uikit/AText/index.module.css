@@ -4,14 +4,8 @@
 .f_s {
 	font-size: var(--b-font-size-s);
 }
-.f_sm {
-	font-size: var(--b-font-size-sm);
-}
 .f_m {
 	font-size: var(--b-font-size-m);
-}
-.f_ml {
-	font-size: var(--b-font-size-ml);
 }
 .f_l {
 	font-size: var(--b-font-size-l);
@@ -24,4 +18,13 @@
 }
 .f_xxxl {
 	font-size: var(--b-font-size-xxxl);
+}
+.f_xxxxl {
+	font-size: var(--b-font-size-xxxxl);
+}
+.font_bold {
+	font-family: var(--b-font-family-bold);
+}
+.font_size {
+	font-size: var(--b-font-size-xl);
 }

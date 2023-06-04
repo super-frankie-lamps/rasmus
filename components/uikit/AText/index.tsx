@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import styles from './index.module.css'
 
 type TxtColor = '-color1' | '-color2' | '-color3' | '-color4'
-type Sizes = 'xs' | 's' | 'sm' | 'm' | 'ml' | 'l' | 'xl' | 'xxl' | 'xxxl'
+type Sizes = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl'| 'xxxxl'
 type Font = 'medium' | 'semiBold' | 'bold'
 
 interface ATextProps extends PropsWithChildren, HTMLAttributes<HTMLElement> {
@@ -17,11 +17,12 @@ interface ATextProps extends PropsWithChildren, HTMLAttributes<HTMLElement> {
 const AText: FC<ATextProps> = ({ as: Tag = 'div', color, size, className, font, children, ...props }) => {
   const classes = clsx([
     className,
-    size && styles[`f_${size}`]
+    size && styles[`f_${size}`],
+    font && styles[`font_${font}`]
   ])
 
   const inlineStyles = {
-    color: `var(--txt${color})`
+    color: `var(--b-txt${color})`
   }
 
   return (

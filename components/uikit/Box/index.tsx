@@ -1,11 +1,8 @@
 import clsx from 'clsx'
-import { ElementType, FC, HTMLAttributes, PropsWithChildren } from 'react'
+import { FC } from 'react'
+import { BoxProps, DirectionProp } from '../types'
 import styles from './index.module.css'
 
-type Sizes = 'xs' | 's' | 'sm' | 'm' | 'ml' | 'l' | 'xl' | 'xxl' | 'xxxl'
-type JustifyProp = 'center' | 'left' | 'right' | 'around' | 'between' | 'start' | 'end'
-type AlignProp = 'center' | 'start' | 'end' | 'baseline'
-type DirectionProp = 'column' | 'rowReverse' | 'columnReverse' | undefined
 type InlineStyles = {
 	flexDirection: DirectionProp,
 	padding?: number | string,
@@ -15,20 +12,6 @@ type InlineStyles = {
 	marginLeft?: number | '' | undefined
 }
 
-interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLElement> {
-	className?: string
-	as?: ElementType
-	justify?: JustifyProp
-	align?: AlignProp
-	wrap?: boolean
-	direction?: DirectionProp
-	bottom?: Sizes
-	top?: Sizes
-	right?: Sizes
-	left?: Sizes
-	padding?: string
-}
-
 type SizesValue = {
 	[key: string]: number
 }
@@ -36,11 +19,11 @@ type SizesValue = {
 const sizesValue: SizesValue = {
 	xs: 4,
 	s: 8,
-	sm: 16,
-	ml: 24,
-	l: 32,
-	xl: 48,
-	xxl: 64,
+	m: 16,
+	ms: 20,
+	l: 30,
+	xl: 40,
+	xxl: 80,
 	xxxl: 128
   };
 

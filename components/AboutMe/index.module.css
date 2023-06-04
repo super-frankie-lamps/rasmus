@@ -1,0 +1,23 @@
+.wrapper {
+   background: var(--b-bg-color2);
+   background-image: url('../../public/assets/images/rasmus.jpg');
+   background-repeat: no-repeat;
+   background-position: right;
+   padding: 100px 0;
+}
+.content {
+   max-width: 440px;
+   width: 100%;
+}
+.content div {
+   line-height: 160%;
+}
+.externalLink {
+   color: var(--b-txt-color2);
+   font-family: var(--b-font-family-semiBold);
+   font-size: var(--b-font-size-xl);
+   line-height: 200%;
+}
+.emailLink {
+   text-decoration: underline var(--b-txt-color2) solid 1px;
+}
