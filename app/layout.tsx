@@ -1,3 +1,4 @@
+import Footer from '@components/Footer'
 import '@styles/globals.css'
 import { FC, PropsWithChildren } from 'react'
 
@@ -14,6 +15,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 		<body>
 			<main className="app">
 				{children}
+				<Footer/>
 			</main>
 		</body>
 	</html>

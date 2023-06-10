@@ -1,0 +1,20 @@
+.wrapper {
+   padding: 60px 0 164px;
+   background: var(--b-bg-color3);
+}
+.content {
+   width: 100%;
+}
+.icon {
+   margin-bottom: 20px;
+   align-items: center;
+}
+.mailInfo {
+   margin-right: 60px;
+}
+.phoneInfo {
+   margin-right: 118px;
+}
+.mapInfo {
+   padding-left: var(--b-spacing-ms);
+}

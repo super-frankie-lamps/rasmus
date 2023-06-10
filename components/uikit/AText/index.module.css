@@ -22,9 +22,21 @@
 .f_xxxxl {
 	font-size: var(--b-font-size-xxxxl);
 }
+.font_medium {
+	font-family: var(--b-font-family-medium);
+}
 .font_bold {
 	font-family: var(--b-font-family-bold);
 }
+.font_semiBold {
+	font-family: var(--b-font-family-semiBold);
+}
 .font_size {
 	font-size: var(--b-font-size-xl);
+}
+.align_center {
+	text-align: center;
+}
+.text {
+	display: flex;
 }

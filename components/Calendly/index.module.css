@@ -1,0 +1,11 @@
+.calendly {
+   padding: 60px 0 60px;
+}
+.calendlyWrapper {
+   max-width: 612px;
+   width: 100%;
+   border: 1px solid var(--b-bg-color4);
+}
+.calendlyWrapper > div {
+   width: 100%;
+}

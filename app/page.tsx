@@ -1,4 +1,5 @@
 import AboutMe from "@components/AboutMe"
+import Calendly from "@components/Calendly"
 import ServiceList from "@components/ServiceList"
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
 		<ServiceList/>
     <AboutMe/>
+    <Calendly/>
     </>
   )
 }

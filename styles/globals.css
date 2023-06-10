@@ -10,7 +10,10 @@
   --b-txt-color3: #FFD15C;
 
   --b-bg-color1: #F8F8F8;
-  --b-bg-color2: #1E1E1E;
+  --b-bg-color2: #000000;
+  --b-bg-color3: #FFD15C;
+  --b-bg-color4: #CCC;
+
 
   --b-font-size-xs: 12px;
   --b-font-size-s: 14px;
@@ -75,4 +78,8 @@ img {
 
 ul {
   list-style: none;
+}
+button {
+  outline: none;
+  border: none;
 }
