@@ -1,0 +1,7 @@
+.link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: inherit;
+	flex-shrink: 0;
+	text-decoration: none;
+}

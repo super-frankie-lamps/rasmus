@@ -5,7 +5,7 @@ import styles from './index.module.css'
 type TxtColor = '-color1' | '-color2' | '-color3' | '-color4'
 type Sizes = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl'| 'xxxxl'
 type Font = 'medium' | 'semiBold' | 'bold'
-type TxtAlign = 'center'| 'end'
+type TxtAlign = 'center'| 'left'
 
 interface ATextProps extends PropsWithChildren, HTMLAttributes<HTMLElement> {
 	className?: string

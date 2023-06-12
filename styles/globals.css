@@ -6,13 +6,17 @@
   --b-font-family-bold: 'Bold', sans-serif;
 
   --b-txt-color1: #282828;
-  --b-txt-color2: #FFF;
+  --b-txt-color2: #fff;
   --b-txt-color3: #FFD15C;
+  --b-txt-color4: #222;
+  --b-txt-color5: #f2f2f2;
 
   --b-bg-color1: #F8F8F8;
   --b-bg-color2: #000000;
   --b-bg-color3: #FFD15C;
   --b-bg-color4: #CCC;
+  --b-bg-color5: #FFF;
+  --b-bg-color6: #F2F2F2;
 
 
   --b-font-size-xs: 12px;
@@ -36,6 +40,8 @@
   --b-border-width-xs: 1px;
 
   --b-container-width: 1160px;
+
+  --b-transition-speed: 0.3s;
 }
 
 @font-face {
@@ -82,4 +88,7 @@ ul {
 button {
   outline: none;
   border: none;
+  color: inherit;
+  background: none;
+  font-size: inherit;
 }

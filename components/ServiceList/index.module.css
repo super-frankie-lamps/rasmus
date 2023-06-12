@@ -1,6 +1,6 @@
 .wrapper {
    background: url(../../public/assets/images/serviceListBg.jpg);
-   padding: var(--b-spacing-ms) 0 178px;
+   padding: var(--b-spacing-l) 0 178px;
 }
 .listWrapper {
    width: 100%;
@@ -19,17 +19,6 @@
 }
 .icon {
    margin-right: var(--b-spacing-m);
-}
-.item {
-   min-height: 24px;
-   align-items: center;
-   margin-right: var(--b-spacing-xl);
-}
-.item:last-child {
-   margin-right: 0;
-}
-.item img {
-   margin-right: var(--b-spacing-s);
 }
 .btn {
    font-family: var(--b-font-family-semiBold);

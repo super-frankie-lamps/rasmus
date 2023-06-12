@@ -37,6 +37,10 @@
 .align_center {
 	text-align: center;
 }
+.align_left {
+	text-align: left;
+}
 .text {
 	display: flex;
+	position: relative;
 }

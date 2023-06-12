@@ -1,4 +1,5 @@
-import { PropsWithChildren, HTMLAttributes, ElementType } from "react"
+import { LinkProps } from "next/link"
+import { PropsWithChildren, HTMLAttributes, ElementType, AnchorHTMLAttributes } from "react"
 
 type Sizes = 'xs' | 's' | 'sm' | 'm' | 'ml' | 'l' | 'xl' | 'xxl' | 'xxxl'
 type JustifyProp = 'center' | 'left' | 'right' | 'around' | 'between' | 'start' | 'end'
@@ -18,3 +19,10 @@ export interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLElement>
 	left?: Sizes
 	padding?: string
 }
+
+type AnchorProps = Omit<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  keyof LinkProps
+>;
+
+export interface CustomAnchorProps extends LinkProps, AnchorProps {}
