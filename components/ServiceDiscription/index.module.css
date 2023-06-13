@@ -1,0 +1,4 @@
+.wrapper {
+   background: var(--b-bg-color1);
+   padding: var(--b-spacing-xl) 0 var(--b-spacing-xxxl);
+}
