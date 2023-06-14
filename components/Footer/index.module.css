@@ -1,19 +1,17 @@
 .wrapper {
-   padding: 60px 0 164px;
+   padding: 80px 0;
    background: var(--b-bg-color3);
 }
 .content {
    width: 100%;
 }
 .icon {
-   margin-bottom: 20px;
+   margin-bottom: var(--b-spacing-l);
    align-items: center;
 }
-.mailInfo {
-   margin-right: 60px;
-}
-.phoneInfo {
-   margin-right: 118px;
+.item {
+   min-width: 180px;
+   margin-right: calc(var(--b-spacing-xl) + var(--b-spacing-ms));
 }
 .mapInfo {
    padding-left: var(--b-spacing-ms);

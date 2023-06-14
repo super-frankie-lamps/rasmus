@@ -16,7 +16,7 @@ interface ATextProps extends PropsWithChildren, HTMLAttributes<HTMLElement> {
   align?: TxtAlign
 }
 
-const AText: FC<ATextProps> = ({ as: Tag = 'div', color, size, className, font, children, align, ...props }) => {
+const AText: FC<ATextProps> = ({ as: Tag = 'div', color = '-color4', size, className, font, children, align, ...props }) => {
   const classes = clsx([
     styles.text,
     className,

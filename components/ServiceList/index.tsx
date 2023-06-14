@@ -1,14 +1,25 @@
+"use client"
 import Image from "next/image"
 import { Container } from "@components/common"
 import { AText, Box, Section } from "@components/uikit"
 import briefcase from "@public/assets/icons/briefcase.svg"
 import Button from "@components/uikit/Button"
 import Header from "@components/Header"
+import { MouseEventHandler } from "react"
 import styles from './index.module.css'
 
 const serviceList = ['Anpartsselskab (ApS)', 'Aktieselskab (A/S)', 'Enkeltmandsvirksomhed (EMV/PMV)', 'Interessentskab (I/S)', 'Kommanditselskab(K/S)']
 
 const ServiceList = () => {
+   const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+      event.preventDefault();
+      const targetId = 'calendly';
+      const elem = document.getElementById(targetId)
+      window.scrollTo({
+         top: elem?.getBoundingClientRect().top,
+         behavior: "smooth",
+       });
+    }
    return (
       <Section justify="center" className={styles.wrapper}>
          <Container>
@@ -32,7 +43,7 @@ const ServiceList = () => {
                      </Box>
                   </Box>
                </Box>
-               <Button className={styles.btn}><i className={styles.btnIcon}/>Book the meeting</Button>
+               <Button onClick={handleClick} className={styles.btn}><i className={styles.btnIcon}/>Book the meeting</Button>
             </Box>
          </Container>
       </Section>
