@@ -1,16 +1,16 @@
 import clsx from "clsx";
-import { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
+import { ButtonHTMLAttributes, ForwardRefRenderFunction, PropsWithChildren, forwardRef } from "react";
 import styles from "./index.module.css"
 
 interface ButtonProps extends PropsWithChildren, ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const Button: FC<ButtonProps> = ({children, className, ...props}) => {
+const Button: ForwardRefRenderFunction<HTMLButtonElement,ButtonProps> = ({children, className, ...props}, ref) => {
    const classes = clsx([
 		styles.btn,
 		className
    ])
    return (
-      <button type="button" className={classes} {...props}>{children}</button>
+      <button ref={ref} type="button" className={classes} {...props}>{children}</button>
       )
 }
-export default Button;
+export default forwardRef(Button);

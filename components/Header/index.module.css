@@ -4,8 +4,6 @@
  }
  .item button {
 	transition: var(--b-transition-speed);
-	padding-top: 3px;
-	padding-bottom: 3px;
  }
  .item button:hover {
 	color: var(--b-txt-color5);
@@ -32,6 +30,10 @@
  .item img {
 	margin-right: var(--b-spacing-s);
  }
+ .item img:nth-child(3) {
+	margin-right: 0;
+	margin-left: var(--b-spacing-s);
+ }
  .logo:hover {
 	color: var(--b-txt-color5);
  }
@@ -56,6 +58,7 @@
  }
  .dropdownItem {
 	width: 100%;
+	justify-content: space-between;
  }
  .active {
 	opacity: 1;
@@ -77,4 +80,23 @@
  .dropdownItem a:hover {
 	font-family: var(--b-font-family-medium);
 	background-color: var(--b-bg-color6);
+ }
+ .dropdownItem a img {
+	opacity: 0;
+	visibility: hidden;
+	width: 18px;
+	height: 16px;
+	transition: var(--b-transition-speed);
+ }
+ .dropdownItem a:hover img {
+	opacity: 1;
+	visibility: visible;
+ }
+
+ .caret {
+	width: 24px;
+	height: 24px;
+ }
+ .up {
+	transform: rotate(180deg);
  }

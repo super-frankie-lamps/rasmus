@@ -1,7 +1,9 @@
+import Image from "next/image"
 import { FC } from "react"
-import { AText, Box, CustomLink } from "@components/uikit"
-import styles from "./index.module.css"
 import clsx from "clsx"
+import { AText, Box, CustomLink } from "@components/uikit"
+import arrow from "@public/assets/icons/arrow.svg"
+import styles from "./index.module.css"
 
 interface DropDownProps {
   list: Array<any>,
@@ -19,7 +21,7 @@ const DropDown: FC<DropDownProps> = ({ list, isActive }) => {
         return (
           <Box as="li">
             <AText color="-color4" align="left" className={styles.dropdownItem}>
-              <CustomLink href={link}>{name}</CustomLink>
+              <CustomLink href={link}>{name}<Image src={arrow} alt="" /></CustomLink>
             </AText>
           </Box>
         )

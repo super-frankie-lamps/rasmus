@@ -5,9 +5,11 @@ import { AText, Box, Button, ScrollLink } from "@components/uikit"
 import briefcase from "@public/assets/icons/briefcase.svg"
 import contacts from "@public/assets/icons/contacts.svg"
 import booking from "@public/assets/icons/booking.svg"
+import angle from "@public/assets/icons/angle.svg"
 import DropDown from "./DropDown"
-import styles from './index.module.css'
 import { useOutsideClick } from "@components/hooks"
+import clsx from "clsx"
+import styles from './index.module.css'
 
 type SubItem = {
 	name: string,
@@ -47,7 +49,7 @@ const menuList: MenuList = [
 			{
 				name: 'Luk K/S',
 				link: ''
-			},
+			}
 		]
 	},
 	{
@@ -73,6 +75,11 @@ const NavBar = () => {
 
 	const ref = useOutsideClick(() => setOpen(false));
 
+	const caretClasses = clsx([
+		styles.caret,
+		isOpen && styles.up
+	]);
+
 	return (
 		<Box as="nav">
 			<Box as="ul" align="center">
@@ -81,7 +88,7 @@ const NavBar = () => {
 					return (
 						<AText as="li" color="-color2" size="m" className={styles.item} key={name}>
 							<Comp {...compProps}>
-								<Image src={img} alt=""/>{name}
+								<Image src={img} alt=""/>{name} {Boolean(items.length) && <Image className={caretClasses} src={angle} alt="" />}
 							</Comp>
 							{Boolean(items.length) && (
 								<DropDown list={items} isActive={isOpen} />
