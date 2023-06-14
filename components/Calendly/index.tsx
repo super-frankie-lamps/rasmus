@@ -11,7 +11,9 @@ const Calendly = () => {
             <Box direction="column" align="center">
                <AText font="bold" size="xxl" align="center">Book op til 30 minutters gratis rådgivning om nedlukning af virksomhed:</AText>
                <Box top="xl" className={styles.calendlyWrapper}>
-                  <InlineWidget url="https://calendly.com/konstantinmgeni/one-to-one?background_color=fdfcfc&text_color=151515&primary_color=0a6cf8&month=2023-06"/>
+                  <InlineWidget url="https://calendly.com/konstantinmgeni/one-to-one" styles={{
+  height: '860px'
+}}/>
                </Box>
             </Box>
          </Container>

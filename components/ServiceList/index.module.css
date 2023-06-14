@@ -1,30 +1,49 @@
 .wrapper {
    background: url(../../public/assets/images/serviceListBg.jpg);
-   padding: var(--b-spacing-l) 0 178px;
+   padding: var(--b-spacing-l) 0 128px;
 }
 .listWrapper {
    width: 100%;
    justify-content: space-between;
 }
 .title {
-   max-width: 560px;
+   max-width: 660px;
    width: 100%;
+   line-height: 1.4;
 }
 .list {
    max-width: 460px;
    width: 100%;
 }
 .serviceList {
+   background: url();
    margin-bottom: var(--b-spacing-ms);
 }
 .icon {
    margin-right: var(--b-spacing-m);
 }
+.btnIcon {
+   width: 16px;
+   height: 18px;
+   background: url(../../public/assets/icons/booking.svg);
+   margin-right: var(--b-spacing-m);
+   transition: var(--b-transition-speed) linear;
+}
 .btn {
+   max-width: 228px;
    font-family: var(--b-font-family-semiBold);
    color: var(--b-txt-color2);
    background: transparent;
    border: 1px var(--b-bg-color1) solid;
    border-radius: 60px;
-   padding: 16px 24px;
+   padding: 18px 24px;
+   font-size: var(--b-font-size-m);
+   transition: var(--b-transition-speed) linear;
+}
+.btn:hover {
+   background: var(--b-bg-color5);
+   color: var(--b-txt-color4);
+}
+.btn:hover .btnIcon {
+   background: url(../../public/assets/icons/bookingDark.svg);
 }

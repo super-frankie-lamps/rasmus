@@ -6,7 +6,7 @@
    padding: 100px 0;
 }
 .content {
-   max-width: 440px;
+   max-width: 500px;
    width: 100%;
 }
 .content div {
@@ -17,7 +17,14 @@
    font-family: var(--b-font-family-semiBold);
    font-size: var(--b-font-size-xl);
    line-height: 200%;
+   transition: var(--b-transition-speed) linear;
+}
+.externalLink:hover {
+   color: var(--b-txt-color5);
 }
 .emailLink {
    text-decoration: underline var(--b-txt-color2) solid 1px;
+}
+.emailLink:hover {
+   text-decoration: none;
 }

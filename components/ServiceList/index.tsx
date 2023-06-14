@@ -2,7 +2,6 @@ import Image from "next/image"
 import { Container } from "@components/common"
 import { AText, Box, Section } from "@components/uikit"
 import briefcase from "@public/assets/icons/briefcase.svg"
-import booking from "@public/assets/icons/booking.svg"
 import Button from "@components/uikit/Button"
 import Header from "@components/Header"
 import styles from './index.module.css'
@@ -33,9 +32,7 @@ const ServiceList = () => {
                      </Box>
                   </Box>
                </Box>
-                  <Box>
-                     <Button className={styles.btn}><Image src={booking} alt="booking" className={styles.icon}/>Book the meeting</Button>
-                  </Box>
+               <Button className={styles.btn}><i className={styles.btnIcon}/>Book the meeting</Button>
             </Box>
          </Container>
       </Section>
