@@ -16,18 +16,18 @@ const Footer: FC = () => {
                <Box top="xl" justify="start">
                   <Box direction="column" className={styles.item}>
                      <Image src={mail} alt="mail" className={styles.icon}/>
-                     <AText font="semiBold" size="xl">ral@paragraffen.dk</AText>
+                     <AText font="semiBold" size="xl"><a href="mailto:ral@paragraffen.dk">ral@paragraffen.dk</a></AText>
                   </Box>
                   <Box direction="column" className={styles.item}>
                      <Image src={phone} alt="phone" className={styles.icon}/>
-                     <AText font="semiBold" size="xl">+45 61 48 34 56</AText>
+                     <AText font="semiBold" size="xl"><a href="tel:+4561483456">+45 61 48 34 56</a></AText>
                   </Box>
                   <Box direction="column">
                      <Box className={styles.icon}>
                         <Image src={map} alt="map"/>
                         <AText className={styles.mapInfo} font="semiBold" size="xl">Legal Office ApS</AText>
                      </Box>
-                     <AText font="semiBold" size="xl">Hindegade 6, 1303 København K</AText>
+                     <AText font="semiBold" size="xl"><a target="_blank" href="https://goo.gl/maps/FzY8XCru2LzZqVrt7">Hindegade 6, 1303 København K</a></AText>
                   </Box>
                </Box>
             </Box>
