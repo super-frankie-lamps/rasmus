@@ -1,0 +1,18 @@
+.wrapper {
+   background: var(--b-bg-color2);
+   padding: var(--b-spacing-l) 0 80px;
+}
+.listWrapper {
+   width: 100%;
+}
+.icon {
+   margin-right: var(--b-spacing-m);
+}
+.btn {
+   font-family: var(--b-font-family-semiBold);
+   color: var(--b-txt-color2);
+   background: transparent;
+   border: 1px var(--b-bg-color1) solid;
+   border-radius: 60px;
+   padding: 16px 24px;
+}
