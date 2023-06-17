@@ -6,11 +6,11 @@ import { FC } from "react"
 import styles from "./index.module.css"
 import booking from "@public/assets/icons/booking.svg"
 
-const ServiceTitles: FC = () => {
+const ServiceTitle: FC = () => {
    return (
       <Section justify="center" className={styles.wrapper}>
          <Container>
-            <Box className={styles.listWrapper} direction="column">
+            <Box className={styles.listWrapper} justify="between" direction="column">
                <Header/>
                <Box direction="column">
                   <Box bottom="xl">
@@ -26,4 +26,4 @@ const ServiceTitles: FC = () => {
    )
 }
 
-export default ServiceTitles
+export default ServiceTitle

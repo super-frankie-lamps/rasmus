@@ -1,11 +1,11 @@
-import ServiceDiscription from "@components/ServiceDiscription"
+import ServiceDescription from "@components/ServiceDescription"
 import ServiceTitle from "@components/ServiceTitle"
 
 const Service = () => {
    return (
       <>
          <ServiceTitle/>
-         <ServiceDiscription/>
+         <ServiceDescription/>
       </>
    )
 }

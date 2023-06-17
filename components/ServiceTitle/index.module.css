@@ -4,7 +4,6 @@
 }
 .listWrapper {
    width: 100%;
-   justify-content: space-between;
 }
 .icon {
    margin-right: var(--b-spacing-m);
