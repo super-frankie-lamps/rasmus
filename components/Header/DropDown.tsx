@@ -17,9 +17,9 @@ const DropDown: FC<DropDownProps> = ({ list, isActive }) => {
   ])
   return (
     <Box as="ul" direction="column" className={classes}>
-      {list.map(({ name, link }) => {
+      {list.map(({ id, name, link }) => {
         return (
-          <Box as="li">
+          <Box as="li" key={id}>
             <AText color="-color4" align="left" className={styles.dropdownItem}>
               <CustomLink href={link}>{name}<Image src={arrow} alt="" /></CustomLink>
             </AText>

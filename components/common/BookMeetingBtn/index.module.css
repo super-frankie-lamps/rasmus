@@ -1,0 +1,25 @@
+.btnIcon {
+	width: 16px;
+	height: 18px;
+	background: url(../../../public/assets/icons/booking.svg);
+	margin-right: var(--b-spacing-m);
+	transition: var(--b-transition-speed) linear;
+ }
+ .btn {
+	max-width: 228px;
+	font-family: var(--b-font-family-semiBold);
+	color: var(--b-txt-color2);
+	background: transparent;
+	border: 1px var(--b-bg-color1) solid;
+	border-radius: 60px;
+	padding: 18px 24px;
+	font-size: var(--b-font-size-m);
+	transition: var(--b-transition-speed) linear;
+ }
+ .btn:hover {
+	background: var(--b-bg-color5);
+	color: var(--b-txt-color4);
+ }
+ .btn:hover .btnIcon {
+	background: url(../../../public/assets/icons/bookingDark.svg);
+ }

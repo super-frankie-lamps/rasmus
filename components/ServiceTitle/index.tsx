@@ -1,12 +1,17 @@
-import Image from "next/image"
-import { Container } from "@components/common"
-import Header from "@components/Header"
-import { AText, Box, Button, Section } from "@components/uikit"
 import { FC } from "react"
+import { BookMeetingBtn, Container } from "@components/common"
+import Header from "@components/Header"
+import { AText, Box, Section } from "@components/uikit"
+import { serviceList } from "@data"
 import styles from "./index.module.css"
-import booking from "@public/assets/icons/booking.svg"
 
-const ServiceTitle: FC = () => {
+interface ServiceTitleProps {
+   id: string;
+}
+
+const ServiceTitle: FC<ServiceTitleProps> = ({ id }) => {
+   const currentService = serviceList.find(({ id: serviceId }) => serviceId === id);
+   const { name } = currentService || {};
    return (
       <Section justify="center" className={styles.wrapper}>
          <Container>
@@ -14,11 +19,9 @@ const ServiceTitle: FC = () => {
                <Header/>
                <Box direction="column">
                   <Box bottom="xl">
-                     <AText color="-color2" font="bold" size="xxxxl">Luk A/S</AText>
+                     <AText color="-color2" font="bold" size="xxxxl">{name}</AText>
                   </Box>
-                  <Box>
-                     <Button className={styles.btn}><Image src={booking} alt="booking" className={styles.icon}/>Book the meeting</Button>
-                  </Box>
+                  <BookMeetingBtn />
                </Box>
             </Box>
          </Container>

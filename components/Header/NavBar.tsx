@@ -1,6 +1,9 @@
 "use client"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 import { FC, MouseEventHandler, useState } from "react"
+import clsx from "clsx"
 import { AText, Box, Button, ScrollLink } from "@components/uikit"
 import briefcase from "@public/assets/icons/briefcase.svg"
 import contacts from "@public/assets/icons/contacts.svg"
@@ -8,10 +11,11 @@ import booking from "@public/assets/icons/booking.svg"
 import angle from "@public/assets/icons/angle.svg"
 import DropDown from "./DropDown"
 import { useOutsideClick } from "@components/hooks"
-import clsx from "clsx"
+import { serviceList } from "@data"
 import styles from './index.module.css'
 
 type SubItem = {
+	id: string,
 	name: string,
 	link: string
 }
@@ -24,49 +28,29 @@ type MenuItem = {
 }
 type MenuList = Array<MenuItem>
 
-const menuList: MenuList = [
-	{
-		name: 'Vores Ydelser',
-		img: briefcase,
-		component: Button,
-		items: [
-			{
-				name: 'Luk ApS',
-				link: ''
-			},
-			{
-				name: 'Luk A/S',
-				link: ''
-			},
-			{
-				name: 'Luk EMV',
-				link: ''
-			},
-			{
-				name: 'Luk I/S',
-				link: ''
-			},
-			{
-				name: 'Luk K/S',
-				link: ''
-			}
-		]
-	},
-	{
-		name: 'Book møde',
-		img: booking,
-		component: ScrollLink,
-		link: '#calendly'
-	},
-	{
-		name: 'Contacts',
-		img: contacts,
-		component: ScrollLink,
-		link: '#footer'
-	}
-]
-
 const NavBar = () => {
+	const pathname = usePathname();
+	const isHome = pathname === '/';
+	const menuList: MenuList = [
+		{
+			name: 'Vores Ydelser',
+			img: briefcase,
+			component: Button,
+			items: serviceList
+		},
+		{
+			name: 'Book møde',
+			img: booking,
+			component: isHome ? ScrollLink : Link,
+			link: '#calendly'
+		},
+		{
+			name: 'Contacts',
+			img: contacts,
+			component: ScrollLink,
+			link: '#footer'
+		}
+	]
 	const [isOpen, setOpen] = useState<boolean>(false)
 	const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
 		event.preventDefault()

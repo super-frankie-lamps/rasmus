@@ -1,0 +1,13 @@
+.sideBar {
+	min-width: 360px;
+	max-width: 360px;
+	width: 100%;
+	background: rgba(255, 209, 92, 0.1);
+	height: fit-content;
+ }
+ .list > li {
+	margin-bottom: var(--b-spacing-l);
+ }
+ .list > li:last-child {
+	margin-bottom: 0;
+ }
