@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FC } from "react"
 import { Container } from "@components/common"
-import { AText, Box, Section } from "@components/uikit"
+import { AText, Box } from "@components/uikit"
 import mail from "@public/assets/icons/mail.svg"
 import phone from "@public/assets/icons/phone.svg"
 import map from "@public/assets/icons/map.svg"

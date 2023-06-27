@@ -28,3 +28,13 @@
 .emailLink:hover {
    text-decoration: none;
 }
+
+@media (max-width: 480px) {
+   .wrapper {
+      padding: 0;
+      background-image: none;
+   }
+   .content {
+      padding: 40px 25px 80px;
+   }
+}

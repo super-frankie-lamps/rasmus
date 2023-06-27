@@ -1,4 +1,5 @@
 .container {
 	width: 100%;
 	max-width: var(--b-container-width);
+	padding: 0 25px;
 }
