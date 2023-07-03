@@ -1,5 +1,6 @@
 .nav {
 	width: 100%;
+	justify-content: space-between;
 }
 .item {
 	align-items: center;
@@ -53,6 +54,18 @@
 	background-color: var(--b-bg-color5);
 	padding: var(--b-spacing-m);
  }
+ .dropdown.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	transition: var(--b-transition-speed) ease;
+}
+.dropdown.inactive {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-20px);
+	transition: var(--b-transition-speed) ease;
+}
  .dropdown::before {
 	content: '';
 	position: absolute;
@@ -66,18 +79,6 @@
  .dropdownItem {
 	width: 100%;
 	justify-content: space-between;
- }
- .active {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-	transition: var(--b-transition-speed) ease;
- }
- .inactive {
-	opacity: 0;
-	visibility: hidden;
-	transform: translateY(-20px);
-	transition: var(--b-transition-speed) ease;
  }
  .dropdownItem a {
 	padding: var(--b-spacing-m);
@@ -106,27 +107,6 @@
  .up {
 	transform: rotate(180deg);
  }
-.menu {
-	position: absolute;
-	top: 52px;
-	z-index: 1;
-	width: 260px;
-	border-radius: 6px;
-	background-color: var(--b-bg-color5);
-	padding: var(--b-spacing-m);
-}
-.menu.active {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-	transition: var(--b-transition-speed) ease;
-}
-.menu.inactive {
-	opacity: 0;
-	visibility: hidden;
-	transform: translateY(-20px);
-	transition: var(--b-transition-speed) ease;
-}
 
 @media (max-width: 1024px) {
 	.header {
@@ -193,14 +173,30 @@
 	}
 	/* End of mobile burger btn */
 
+	.menu.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: var(--b-transition-speed) ease;
+	}
+	.menu.inactive {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-20px);
+		transition: var(--b-transition-speed) ease;
+	}
 	.menu {
+		position: absolute;
+		z-index: 1;
 		width: 100%;
 		height: calc(100vh - 70px);
 		left: 0;
 		top: 70px;
 		flex-direction: column;
+		padding: var(--b-spacing-m);
 		padding-top: 40px;
 		border-radius: 0;
+		background-color: var(--b-bg-color5);
 	}
 	.item {
 		margin-right: 0;

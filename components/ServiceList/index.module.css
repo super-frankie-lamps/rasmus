@@ -26,5 +26,9 @@
 @media (max-width: 1024px) {
    .listWrapper {
       position: static;
+      padding-top: 125px;
+   }
+   .title {
+      margin-bottom: var(--b-spacing-l);
    }
 }

@@ -13,7 +13,7 @@ export interface BoxProps extends PropsWithChildren, HTMLAttributes<HTMLElement>
 	align?: AlignProp
 	wrap?: boolean
 	direction?: DirectionProp
-	bottom?: Sizes
+	bottom?: Sizes | string
 	top?: Sizes
 	right?: Sizes
 	left?: Sizes
