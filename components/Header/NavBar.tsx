@@ -1,17 +1,13 @@
-"use client"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { FC, MouseEventHandler, useState } from "react"
-import clsx from "clsx"
-import { AText, Box, Button, ScrollLink } from "@components/uikit"
-import briefcase from "@public/assets/icons/briefcase.svg"
-import contacts from "@public/assets/icons/contacts.svg"
-import booking from "@public/assets/icons/booking.svg"
-import angle from "@public/assets/icons/angle.svg"
-import DropDown from "./DropDown"
-import { useOutsideClick } from "@components/hooks"
+import { Dispatch, FC, SetStateAction } from "react"
+import { Box, Button, ScrollLink } from "@components/uikit"
 import { serviceList } from "@data"
+import Menu from "./Menu"
+import { useMediaQuery } from "react-responsive"
+import { MOBILE_QUERY } from "@constants"
+import clsx from "clsx"
+import BurgerBtn from "./BurgerBtn"
 import styles from './index.module.css'
 
 type SubItem = {
@@ -28,60 +24,49 @@ type MenuItem = {
 }
 type MenuList = Array<MenuItem>
 
-const NavBar = () => {
+interface NavBarProps {
+	setOpen: Dispatch<SetStateAction<boolean>>
+	isOpen: boolean
+}
+
+const NavBar: FC<NavBarProps> = ({ setOpen, isOpen }) => {
 	const pathname = usePathname();
 	const isHome = pathname === '/';
 	const menuList: MenuList = [
 		{
 			name: 'Vores Ydelser',
-			img: briefcase,
+			img: 'BRIEFCASE',
 			component: Button,
 			items: serviceList
 		},
 		{
 			name: 'Book møde',
-			img: booking,
+			img: 'BOOKING',
 			component: isHome ? ScrollLink : Link,
 			link: '#calendly'
 		},
 		{
 			name: 'Contacts',
-			img: contacts,
+			img: 'CONTACTS',
 			component: ScrollLink,
 			link: '#footer'
 		}
 	]
-	const [isOpen, setOpen] = useState<boolean>(false)
-	const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
-		event.preventDefault()
-		setOpen(!isOpen)
-	}
+	const isMobile = useMediaQuery(MOBILE_QUERY)
+	const classes = clsx([
+		styles.menu,
+		isOpen ? styles.active : styles.inactive
+	])
 
-	const ref = useOutsideClick(() => setOpen(false));
-
-	const caretClasses = clsx([
-		styles.caret,
-		isOpen && styles.up
-	]);
-
-	return (
-		<Box as="nav">
-			<Box as="ul" align="center">
-				{menuList.map(({ component: Comp, img, name, link, items = [] }) => {
-					const compProps = link ? { href: link } : { onClick: handleClick, ref } 
-					return (
-						<AText as="li" color="-color2" size="m" className={styles.item} key={name}>
-							<Comp {...compProps}>
-								<Image src={img} alt=""/>{name} {Boolean(items.length) && <Image className={caretClasses} src={angle} alt="" />}
-							</Comp>
-							{Boolean(items.length) && (
-								<DropDown list={items} isActive={isOpen} />
-							)}
-						</AText>
-					)
-				})}
+	return (	
+		<>
+			{isMobile && (
+				<BurgerBtn setOpen={setOpen} isOpen={isOpen}/>
+			)}
+			<Box as="ul" align="center" className={classes}>
+				<Menu menuList={menuList} />
 			</Box>
-		</Box>
+		</>
 	)
 }
 

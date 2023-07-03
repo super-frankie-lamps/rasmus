@@ -43,19 +43,6 @@
   --b-transition-speed: 0.3s;
 }
 
-@media (max-width: 480px) {
-  :root {
-    /* --b-font-size-xs: 12px;
-    --b-font-size-s: 14px;
-    --b-font-size-m: 16px; */
-    --b-font-size-l: 16px;
-    /* --b-font-size-xl: 20px;
-    --b-font-size-xxl: 34px; */
-    --b-font-size-xxxl: 32px;
-    --b-font-size-xxxxl: 46px;
-  }
-}
-
 @font-face {
   font-family: 'Regular';
   src: url('../public/assets/fonts/InstrumentSans-Regular.ttf') format('truetype');

@@ -6,7 +6,7 @@ interface ContainerProps extends PropsWithChildren {}
 
 const Container: FC<ContainerProps> = ({ children, ...props }) => {
   return (
-	<Box className={styles.container} {...props}>{children}</Box>
+	  <Box className={styles.container} {...props}>{children}</Box>
   )
 }
 

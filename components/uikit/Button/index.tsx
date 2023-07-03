@@ -11,6 +11,6 @@ const Button: ForwardRefRenderFunction<HTMLButtonElement,ButtonProps> = ({childr
    ])
    return (
       <button ref={ref} type="button" className={classes} {...props}>{children}</button>
-      )
+   )
 }
 export default forwardRef(Button);

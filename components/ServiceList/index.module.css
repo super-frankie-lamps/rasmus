@@ -22,3 +22,9 @@
 .icon {
    margin-right: var(--b-spacing-m);
 }
+
+@media (max-width: 1024px) {
+   .listWrapper {
+      position: static;
+   }
+}
