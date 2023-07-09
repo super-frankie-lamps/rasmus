@@ -5,6 +5,9 @@
    background-position: right;
    padding: 100px 0;
 }
+.mobPhoto {
+   display: none;
+}
 .content {
    max-width: 500px;
    width: 100%;
@@ -29,12 +32,15 @@
    text-decoration: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
    .wrapper {
       padding: 0;
       background-image: none;
    }
    .content {
-      padding: 40px 25px 80px;
+      padding: 40px 0 80px;
+   }
+   .mobPhoto {
+      display: block;
    }
 }

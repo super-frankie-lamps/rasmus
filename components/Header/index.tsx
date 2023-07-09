@@ -19,7 +19,7 @@ const Header: FC = () => {
 		<Box as="header" justify="between" bottom={isMobile ? 'xxl': 'xxxl'} className={clsx([styles.header])}>
 			<Box as="nav" className={navbar}>
 				<AText font="semiBold" size="l" color="-color2">
-					<CustomLink href="/" className={styles.logo}>Rasmus Albrechtsen</CustomLink>
+					<CustomLink href="/" className={styles.logo}>Legal Office ApS</CustomLink>
 				</AText>
 				<NavBar isOpen={isOpen} setOpen={setOpen} />
 			</Box>

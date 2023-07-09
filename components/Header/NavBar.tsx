@@ -2,7 +2,7 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Dispatch, FC, SetStateAction } from "react"
 import { Box, Button, ScrollLink } from "@components/uikit"
-import { serviceList } from "@data"
+// import { serviceList } from "@data"
 import Menu from "./Menu"
 import { useMediaQuery } from "react-responsive"
 import { MOBILE_QUERY } from "@constants"
@@ -33,12 +33,12 @@ const NavBar: FC<NavBarProps> = ({ setOpen, isOpen }) => {
 	const pathname = usePathname();
 	const isHome = pathname === '/';
 	const menuList: MenuList = [
-		{
-			name: 'Vores Ydelser',
-			img: 'BRIEFCASE',
-			component: Button,
-			items: serviceList
-		},
+		// {
+		// 	name: 'Vores Ydelser',
+		// 	img: 'BRIEFCASE',
+		// 	component: Button,
+		// 	items: serviceList
+		// },
 		{
 			name: 'Book møde',
 			img: 'BOOKING',

@@ -6,13 +6,25 @@
    width: 100%;
 }
 .icon {
-   margin-bottom: var(--b-spacing-l);
-   align-items: center;
+   margin-right: var(--b-spacing-ms);
 }
 .item {
    min-width: 180px;
-   margin-right: calc(var(--b-spacing-xl) + var(--b-spacing-ms));
+   margin-right: var(--b-spacing-xl);
+}
+.item:last-child {
+   margin-right: 0;
 }
 .mapInfo {
    padding-left: var(--b-spacing-ms);
+}
+
+@media (max-width: 1024px) {
+   .item {
+      margin-bottom: var(--b-spacing-xl);
+      margin-right: 0;
+   }
+   .item:last-child {
+      margin-bottom: 0;
+   }
 }
