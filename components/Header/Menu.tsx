@@ -1,5 +1,5 @@
 "use client"
-import { FC, MouseEventHandler, useState } from "react"
+import { FC, MouseEventHandler, useEffect, useState } from "react"
 import clsx from "clsx"
 import { AText, Icon } from "@components/uikit"
 import DropDown from "./DropDown"
@@ -24,15 +24,42 @@ type MenuList = Array<MenuItem>
 
 interface MenuProps {
 	menuList: MenuList
+	hideNavbar: () => void
 }
 
-const Menu: FC<MenuProps> = ({ menuList }) => {
+const Menu: FC<MenuProps> = ({ menuList, hideNavbar }) => {
 	const isMobile = useMediaQuery(MOBILE_QUERY)
+	const [isNavbarHidden, setNavbarHidden] = useState<boolean>(false)
 	const [isOpen, setOpen] = useState<boolean>(false)
 	const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
 		event.preventDefault()
 		setOpen(!isOpen)
 	}
+
+	const handleHideNavbar: MouseEventHandler<HTMLAnchorElement> = (event) => {
+		if (isMobile) {
+			setNavbarHidden(true)
+		}
+		event.preventDefault()
+		const [fragment] = event.currentTarget.href.split('/').slice(-1)
+		const targetId = fragment.replace('#', '')
+		const elem = document.getElementById(targetId)
+		const top = (elem?.getBoundingClientRect().top || 0) + window.scrollY
+		window.scrollTo({
+		   top,
+		   behavior: "smooth",
+		 });
+	}
+
+	useEffect(() => {
+		if (isNavbarHidden) {
+			const id = setTimeout(() => {
+				hideNavbar()
+				setNavbarHidden(false)
+			}, 1000);
+            return () => clearTimeout(id);
+		}
+	}, [isNavbarHidden])
 
 	const ref = useOutsideClick(() => setOpen(false));
 
@@ -44,7 +71,7 @@ const Menu: FC<MenuProps> = ({ menuList }) => {
 	return (
 		<>
 			{menuList.map(({ component: Comp, img, name, link, items = [] }) => {
-				const compProps = link ? { href: link } : { onClick: handleClick, ref } 
+				const compProps = link ? { href: link, onClick: handleHideNavbar } : { onClick: handleClick, ref } 
 				return (
 					<AText as="li" color={isMobile ? '-color1' : '-color2'} size={isMobile? 'l' : 'm'} className={styles.item} key={name}>
 						<Comp {...compProps}>

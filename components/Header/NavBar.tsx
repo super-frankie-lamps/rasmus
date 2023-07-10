@@ -1,3 +1,4 @@
+'use client'
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Dispatch, FC, SetStateAction } from "react"
@@ -64,7 +65,7 @@ const NavBar: FC<NavBarProps> = ({ setOpen, isOpen }) => {
 				<BurgerBtn setOpen={setOpen} isOpen={isOpen}/>
 			)}
 			<Box as="ul" align="center" className={classes}>
-				<Menu menuList={menuList} />
+				<Menu menuList={menuList} hideNavbar={() => setOpen(false)} />
 			</Box>
 		</>
 	)

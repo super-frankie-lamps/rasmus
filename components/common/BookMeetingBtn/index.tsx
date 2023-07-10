@@ -9,8 +9,9 @@ const BookMeetingBtn = () => {
 		event.preventDefault();
 		const targetId = 'calendly';
 		const elem = document.getElementById(targetId)
+		const top = (elem?.getBoundingClientRect().top || 0) + window.scrollY
 		window.scrollTo({
-		   top: elem?.getBoundingClientRect().top,
+		   top,
 		   behavior: "smooth",
 		 });
 	}
